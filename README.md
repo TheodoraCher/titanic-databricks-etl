@@ -13,9 +13,9 @@ The goal is to demonstrate core **data engineering skills**:
 ---
 
 ## 🗂️ Project Structure
-  notebooks/ -> PySpark notebooks (Extract, Transform, Load)
-  docs/ -> Architecture diagram & job screenshots
-  data/ -> dataset (Titanic CSV)
+ - notebooks/ -> PySpark notebooks (Extract, Transform, Load)
+ - docs/ -> Architecture diagram & job screenshots
+ - data/ -> dataset (Titanic CSV)
 
   
 ---
