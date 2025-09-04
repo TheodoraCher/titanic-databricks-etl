@@ -4,6 +4,10 @@
 df = spark.table('titanic_silver')
 df.display()
 
+# Import 
+from pyspark.sql.types import * 
+from pyspark.sql.functions import * 
+
 # Feature: has_cabin 
 df=df.withColumn('has_cabin', when(col('cabin').isNotNull(),1 ).otherwise(0))
 
@@ -27,4 +31,4 @@ df = df.withColumn(
 df = df.drop("ticket", "body", "boat", "home.dest", "name", "cabin")
 
 # Load to gold delta table
-df.write.format('delta').mode('overwrite').saveAsTable("titanic_gold")
+df.write.format('delta').mode('overwrite').option("mergeSchema", "true").saveAsTable("titanic_gold")
