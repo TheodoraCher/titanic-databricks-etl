@@ -30,5 +30,5 @@ df = df.fillna({'age': median_age})
 df.display()
 
 # Save as Silver Table
-df.write.format("delta").mode("overwrite").saveAsTable("titanic_silver")
+df.write.format("delta").mode("overwrite").option("mergeSchema", "true").saveAsTable("titanic_silver")
 
