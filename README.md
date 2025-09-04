@@ -12,6 +12,14 @@ The goal is to demonstrate core **data engineering skills**:
 
 ---
 
+### Databricks Job
+The notebooks in this project are designed to run automatically in sequence via a **Databricks Job**.  
+- The job handles the execution order and ensures that each notebook runs after its dependencies.  
+- Notifications can be configured in case of failure.  
+- While the job itself is not included in this repository, the notebooks are organized and ready to be connected to a Databricks Job.
+
+
+
 ## 🗂️ Project Structure
  - notebooks/ -> PySpark notebooks (Extract, Transform, Load)
  - docs/ -> Architecture diagram & job screenshots
@@ -65,7 +73,6 @@ The goal is to demonstrate core **data engineering skills**:
 
 ## 📝 Notes
 - Dataset source: Titanic dataset from Kaggle.
-- 
 ---
 
 ## 📄 License
